@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import UserInfoForm from './UserInfoForm';
+import Interview from './Interview';
+import EndCallMessage from './EndCallMessage';
+import LoadingSpinner from './LoadingSpinner';
 import './App.css';
 
 function App() {
+  const [step, setStep] = useState('gatherInfo');
+  const [userInfo, setUserInfo] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleUserInfoSubmit = (info) => {
+    setIsLoading(true);
+    setUserInfo(info);
+    // Simulate a delay or perform any async operations
+    setTimeout(() => {
+      setIsLoading(false);
+      setStep('interview');
+    }, 2000);
+  };
+
+  const handleEndCall = () => {
+    setStep('endCall');
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isLoading && <LoadingSpinner />}
+      {step === 'gatherInfo' && <UserInfoForm onSubmit={handleUserInfoSubmit} setIsLoading={setIsLoading} />}
+      {step === 'interview' && <Interview userInfo={userInfo} onEndCall={handleEndCall} />}
+      {step === 'endCall' && <EndCallMessage />}
     </div>
   );
 }

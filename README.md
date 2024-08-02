@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+```markdown
+# AI-Powered Interview Assistant
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About the App
 
-## Available Scripts
+The AI-Powered Interview Assistant is a cutting-edge application designed to revolutionize the hiring process. It combines the power of artificial intelligence with traditional recruitment methods to create a seamless, efficient, and unbiased interviewing experience.
 
-In the project directory, you can run:
+Key features:
+- Automated AI-driven interviews
+- Resume analysis and parsing
+- Real-time video conferencing
+- Structured evaluation of candidates
+- Customizable job positions and interview questions
 
-### `npm start`
+This application streamlines the initial screening process, allowing HR professionals and hiring managers to focus on the most promising candidates while ensuring a consistent and fair evaluation for all applicants.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [Environment Variables](#environment-variables)
+4. [File Structure](#file-structure)
+5. [Technologies Used](#technologies-used)
+6. [Contributing](#contributing)
+7. [License](#license)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To set up the AI-Powered Interview Assistant, follow these steps:
 
-### `npm run build`
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/ai-interview-assistant.git
+   cd ai-interview-assistant
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install Python dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install Node.js dependencies:
+   ```
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Set up environment variables (see [Environment Variables](#environment-variables) section)
 
-### `npm run eject`
+5. Start the Flask backend:
+   ```
+   python app.py
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+6. In a new terminal, start the React frontend:
+   ```
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Open a web browser and navigate to `http://localhost:3000`
+2. Fill out the candidate information form
+3. Upload a resume
+4. Select a job position
+5. Start the AI-driven interview
+6. Complete the interview process
+7. Review the AI-generated evaluation and insights
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Environment Variables
 
-## Learn More
+Create a `.env` file in the root directory with the following variables:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+REACT_APP_ASSISTANT_WEBHOOK_URL=https://your-webhook-url.com
+REACT_APP_VAPI_API_KEY=your_vapi_api_key
+OPENAI_API_KEY=your_openai_api_key
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Make sure to replace the placeholder values with your actual API keys and webhook URL.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Frontend: React.js
+- Backend: Flask (Python)
+- AI/ML: OpenAI GPT models
+- Video Conferencing: Vapi AI
+- Styling: CSS
+- State Management: React Hooks
+- API Requests: Fetch API
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+We welcome contributions to the AI-Powered Interview Assistant! Please follow these steps to contribute:
 
-### Advanced Configuration
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature-branch-name`
+3. Make your changes and commit them: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature-branch-name`
+5. Submit a pull request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+```
